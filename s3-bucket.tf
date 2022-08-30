@@ -1,12 +1,8 @@
 module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+  source = "app.terraform.io/fanniemae-mars-apm/s3-bucket/aws"
+  version = "3.4.0"
 
   bucket = "my-s3-bucket"
   bucket_prefix = "scott-roth"
   acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-
 }
